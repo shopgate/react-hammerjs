@@ -122,7 +122,7 @@ gulp.task('publish:tag', function (done) {
 
 gulp.task('publish:npm', function (done) {
 	require('child_process')
-		.spawn('npm', ['publish'], { stdio: 'inherit' })
+		.spawn('npm', ['publish', '--access', 'public'], { stdio: 'inherit' })
 		.on('close', done);
 });
 
@@ -131,4 +131,4 @@ gulp.task('publish:npm', function (done) {
  * Deploy tasks
  */
 
-gulp.task('release', ['publish:tag', 'publish:npm']);
+gulp.task('release', ['publish:npm', 'publish:tag']);
