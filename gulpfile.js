@@ -84,7 +84,7 @@ gulp.task('build', [
 
 function getBumpTask(type) {
 	return function () {
-		return gulp.src(['./package.json', './bower.json'])
+		return gulp.src(['./package.json', './npm-shrinkwrap.json', './bower.json'])
 			.pipe(bump({ type: type }))
 			.pipe(gulp.dest('./'));
 	};
