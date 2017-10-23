@@ -1,5 +1,5 @@
 {
-  "name": "react-hammerjs",
+  "name": "@shopgate/react-hammerjs",
   "version": "0.5.0",
   "description": "ReactJS / HammerJS integration. Support touch events in your React app.",
   "main": "src/Hammer.js",
