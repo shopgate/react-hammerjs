@@ -50,7 +50,7 @@ gulp.task('build:dist', ['prepare:dist'], function () {
 				  targets: {
 					browsers: ["last 2 versions", "ie 10"]
 				  },
-				}]
+				}], "react"
 			  ],
 			  'plugins': ['transform-class-properties'],
 			ignore: /(bower_components)|(node_modules)/
