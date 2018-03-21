@@ -1,6 +1,6 @@
 {
   "name": "@shopgate/react-hammerjs",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "ReactJS / HammerJS integration. Support touch events in your React app.",
   "main": "dist/react-hammerjs.js",
   "author": "Jed Watson",
