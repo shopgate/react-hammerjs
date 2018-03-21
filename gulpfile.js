@@ -75,7 +75,14 @@ gulp.task('build:dist', ['prepare:dist'], function () {
 
 gulp.task('build', [
 	'build:dist'
-]);
+], () => {
+	gulp.src('./package.json')
+		.pipe(gulp.dest(DIST_PATH))
+	gulp.src('./package-lock.json')
+		.pipe(gulp.dest(DIST_PATH))
+	gulp.src('./README.md')
+		.pipe(gulp.dest(DIST_PATH))
+});
 
 
 /**
@@ -120,7 +127,7 @@ gulp.task('publish:tag', function (done) {
  * * (version *must* be bumped first)
  */
 
-gulp.task('publish:npm', function (done) {
+gulp.task('publish:npm', function (done) {	
 	require('child_process')
 		.spawn('npm', ['publish', `./${DIST_PATH}`, '--access', 'public'], { stdio: 'inherit' })
 		.on('close', done);
